@@ -1,0 +1,9 @@
+---
+- name: Add deploy user
+  action: user name=deploy
+
+- name: Create authorized_keys
+  authorized_key: user=deploy key="{{ lookup('file', '/Users/oguni/.ssh/authorized_keys') }}"
+  
+- name: update sudoers
+  copy: src=../templates/sudoers dest=/etc/sudoers

@@ -1,0 +1,5 @@
+---
+- name: be sure git is installed
+  apt: name=git state=installed
+  tags: git
+

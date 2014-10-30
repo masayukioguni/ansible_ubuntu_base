@@ -1,0 +1,8 @@
+---
+- include: update.yml
+- include: sshd.yml
+- include: ntp.yml
+- include: users.yml
+- include: git.yml
+
+
